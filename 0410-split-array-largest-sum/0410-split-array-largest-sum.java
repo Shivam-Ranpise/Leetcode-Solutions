@@ -16,13 +16,13 @@ class Solution {
             int sum = 0;
             int partitions = 1;
 
-            for (int i = 0; i < nums.length; i++) {
-                if(sum + nums[i] > mid){
-                    sum = nums[i];
+            for(int num : nums) {
+                if(sum + num > mid){
+                    sum = num;
                     partitions++;
                 }
                 else{
-                    sum = sum + nums[i];
+                    sum = sum + num;
                 }
             }
             if(partitions > k){
