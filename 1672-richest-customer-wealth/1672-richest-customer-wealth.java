@@ -6,9 +6,7 @@ class Solution {
             for(int n : m){
                 sum += n;
             }
-            if(sum > answer){
-                answer = sum;
-            }
+            answer = Math.max(answer, sum);
         }
         return answer;
     }
